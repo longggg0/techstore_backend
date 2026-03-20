@@ -68,7 +68,19 @@ app.use("/api/v1/orders", orderRoute);
 app.use("/api/v1/categories", categoryRoute);
 app.use("/api/v1/customers-auth", customerlogin);
 
-
+app.get("/", (req, res) => {
+  res.json({
+    message: "TechStore API is running 🚀",
+    version: "1.0.0",
+    endpoints: {
+      products: "/api/v1/products",
+      categories: "/api/v1/categories",
+      orders: "/api/v1/orders",
+      customers: "/api/v1/customers",
+      auth: "/api/v1/customers-auth",
+    }
+  });
+});
 
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}`);
