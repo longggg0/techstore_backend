@@ -22,7 +22,8 @@ const allowedOrigins = [
   "http://localhost:3000",
   "https://www.abc.com",
   "http://localhost:5173",
-  "http://localhost:5174"
+  "http://localhost:5174",
+  "https://mini-ecommerce-techstore-5v3b.vercel.app"
 ];
 
 const corsOptions = {
