@@ -30,7 +30,7 @@ module.exports = {
         unique: true,
       },
       role: {
-        type: DataTypes.STRING,
+        type: Sequelize.STRING,
         defaultValue: "customer",
       },
       createdAt: {
