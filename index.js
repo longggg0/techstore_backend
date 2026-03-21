@@ -1,3 +1,4 @@
+require("dotenv").config();
 const express = require("express");
 const db = require("./models");
 const path = require("path");
@@ -46,6 +47,8 @@ app.use(
   fileUpload({
     limits: { fileSize: 30 * 1024 * 1024 }, // 30MB
     createParentPath: true,
+    useTempFiles: true,        // ✅ Add this
+    tempFileDir: "/tmp/",      // ✅ Add this
   }),
 );
 
